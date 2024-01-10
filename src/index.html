@@ -10,7 +10,7 @@
     <title>Document</title>
   </head>
   <body class="w-full static">
-    <nav class="fixed  top-0 left-0 w-full p-2 z-50">
+    <nav class="fixed top-0 left-0 w-full p-2 z-50">
       <div class="card shadow border glass z-50">
         <div class="navbar w-full">
           <div class="navbar-start">
@@ -96,43 +96,51 @@
     </main>
 
     <script>
-      gsap.fromTo(".mockup-browser",{
-        y: -200,
-      }, {
-        y: 50,
-        duration: 2,
-        ease: "power1.out",
-        rotation: -2,
-      });
+      gsap.fromTo(
+        ".mockup-browser",
+        {
+          y: -200,
+        },
+        {
+          y: 50,
+          duration: 2,
+          ease: "power1.out",
+          rotation: -2,
+        },
+      );
       gsap.from("#main-title", {
         duration: 2,
         opacity: 0,
         ease: "power1.out",
       });
       gsap.from("#second-title", {
-        delay:0.5,
+        delay: 0.5,
         duration: 2,
         opacity: 0,
         ease: "power1.out",
       });
       gsap.from("#sub-title", {
-        delay:1,
+        delay: 1,
         duration: 2,
         opacity: 0,
         ease: "power1.out",
       });
-      gsap.fromTo("#readme-btn",{opacity: 0}, {
-        delay:1.5,
-        duration: 2,
-        opacity: 1,
-        ease: "power1.out",
-      });
+      gsap.fromTo(
+        "#readme-btn",
+        { opacity: 0 },
+        {
+          delay: 1.5,
+          duration: 2,
+          opacity: 1,
+          ease: "power1.out",
+        },
+      );
       gsap.to("#readme-btn", {
         duration: 1,
         scale: 1.1,
         ease: "power1.out",
-        repeat:-1,
-        yoyo:true
+        repeat: -1,
+        yoyo: true,
       });
     </script>
   </body>
