@@ -4,11 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="./style.css" rel="stylesheet" />
+    <script src="./assets/gsap.all.js"></script>
+    <script src="./assets/gsap.min.js"></script>
+
     <title>Document</title>
   </head>
   <body class="w-full static">
     <nav class="fixed top-0 left-0 w-full p-2 z-50">
-      <div class="card overflow-hidden shadow border glass  z-50">
+      <div class="card overflow-hidden shadow border glass z-50">
         <div class="navbar w-full">
           <div class="navbar-start">
             <div class="dropdown">
@@ -53,34 +56,83 @@
       </div>
     </nav>
     <main>
-      <section class="relative h-screen flex justify-center items-center overflow-hidden">
+      <section
+        class="relative h-screen flex justify-center items-center overflow-hidden"
+      >
         <article class="w-full">
-          <h1 class="text-6xl font-bold text-center break-words">
+          <h1
+            id="main-title"
+            class="text-6xl font-bold text-center break-words"
+          >
             เทคโนโลยีต่างๆ
           </h1>
-          <h1 class="text-4xl md:text-6xl mt-2 font-bold text-center break-words">
-            เกี่ยวกับ
+          <h1
+            id="second-title"
+            class="text-4xl md:text-6xl mt-2 font-bold text-center break-words"
+          >
+            ที่เกี่ยวกับ
           </h1>
-          <h1 class="text-4xl md:text-6xl mt-2 font-bold text-center break-words">
+          <h1
+            id="sub-title"
+            class="text-4xl md:text-6xl mt-2 font-bold text-center break-words"
+          >
             การเขียนโปรแกรมเว็ป
           </h1>
           <p class="text-center my-4">
-          <a class="btn">อ่านเพิ่มเติม</a>
-        </p>
+            <a id="readme-btn" class="btn">อ่านเพิ่มเติม</a>
+          </p>
 
           <div class="p-6 absolute">
             <div class="mockup-browser border bg-base-300">
-                <div class="mockup-browser-toolbar">
+              <div class="mockup-browser-toolbar">
                 <div class="input">https://www.it.kmitl.ac.th/th/</div>
-                </div>
-                <div class="flex justify-center bg-base-200">
-                    <img width="100%" src="./assets/itsite.png">
-                </div>
+              </div>
+              <div class="flex justify-center bg-base-200">
+                <img width="100%" src="./assets/itsite.png" />
+              </div>
             </div>
-        </div>
-
+          </div>
         </article>
       </section>
     </main>
+
+    <script>
+      gsap.from(".mockup-browser", {
+        y: -200,
+        duration: 2,
+        ease: "power1.out",
+        rotation: 15,
+      });
+      gsap.from("#main-title", {
+        duration: 2,
+        opacity: 0,
+        ease: "power1.out",
+      });
+      gsap.from("#second-title", {
+        delay:0.5,
+        duration: 2,
+        opacity: 0,
+        ease: "power1.out",
+      });
+      gsap.from("#sub-title", {
+        delay:1,
+        duration: 2,
+        opacity: 0,
+        ease: "power1.out",
+      });
+      gsap.fromTo("#readme-btn",{opacity: 0}, {
+        delay:1.5,
+        duration: 2,
+        opacity: 1,
+        ease: "power1.out",
+      });
+      gsap.to("#readme-btn", {
+        duration: 1,
+        scale: 1.1,
+        ease: "power1.out",
+        repeat:-1,
+        yoyo:true
+      });
+    </script>
   </body>
 </html>

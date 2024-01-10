@@ -12,6 +12,7 @@
     "tailwindcss": "^3.4.1"
   },
   "dependencies": {
-    "@fontsource-variable/noto-sans-thai": "^5.0.12"
+    "@fontsource-variable/noto-sans-thai": "^5.0.12",
+    "gsap": "^3.12.4"
   }
 }
