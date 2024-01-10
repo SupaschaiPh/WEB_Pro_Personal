@@ -35,22 +35,22 @@
                 tabindex="0"
                 class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
               >
-                <li><a>Home</a></li>
-                <li><a>Content</a></li>
-                <li><a>About</a></li>
+                <li><a href="./">Home</a></li>
+                <li><a href="./content">Content</a></li>
+                <li><a href="./about">About</a></li>
               </ul>
             </div>
-            <a class="btn btn-ghost text-xl">SupassTech</a>
+            <a href="./" class="btn btn-ghost text-xl">SupassTech</a>
           </div>
           <div class="navbar-center hidden lg:flex">
             <ul class="menu menu-horizontal px-1">
-              <li><a>Home</a></li>
-              <li><a>Content</a></li>
-              <li><a>About</a></li>
+              <li><a href="./">Home</a></li>
+              <li><a href="./content">Content</a></li>
+              <li><a href="./about">About</a></li>
             </ul>
           </div>
           <div class="navbar-end">
-            <a href="/content" class="btn">Button</a>
+            <a href="/" class="btn">Button</a>
           </div>
         </div>
       </div>
@@ -79,10 +79,10 @@
             การเขียนโปรแกรมเว็ป
           </h1>
           <p class="text-center my-4">
-            <a id="readme-btn" class="btn">อ่านเพิ่มเติม</a>
+            <a href="./content" id="readme-btn" class="btn">อ่านเพิ่มเติม</a>
           </p>
 
-          <div class="p-6 absolute">
+          <div class="md:p-6 absolute">
             <div class="mockup-browser border bg-base-300">
               <div class="mockup-browser-toolbar">
                 <div class="input">https://www.it.kmitl.ac.th/th/</div>
@@ -97,11 +97,13 @@
     </main>
 
     <script>
-      gsap.from(".mockup-browser", {
+      gsap.fromTo(".mockup-browser",{
         y: -200,
+      }, {
+        y: 50,
         duration: 2,
         ease: "power1.out",
-        rotation: 15,
+        rotation: -2,
       });
       gsap.from("#main-title", {
         duration: 2,
