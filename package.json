@@ -1,6 +1,13 @@
 {
+  "name": "Supas s WebProProject",
+  "private": true,
+  "scripts": {
+    "dev": "npx tailwindcss -i ./src/input.css -o ./src/style.css --watch",
+    "format": "npx prettier . --write"
+  },
   "devDependencies": {
     "daisyui": "^4.5.0",
+    "prettier": "3.1.1",
     "tailwindcss": "^3.4.1"
   }
 }
