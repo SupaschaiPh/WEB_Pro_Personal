@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-theme="light" class="w-full">
+<html lang="en" data-theme="autumn" class="w-full">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -49,14 +49,13 @@
             </ul>
           </div>
           <div class="navbar-end">
-            <a href="/" class="btn">Button</a>
           </div>
         </div>
       </div>
     </nav>
     <main>
       <section
-        class="relative h-screen flex justify-center items-center overflow-hidden"
+        class="hero relative h-screen flex justify-center items-center overflow-hidden"
       >
         <article class="w-full">
           <h1
@@ -78,7 +77,12 @@
             การเขียนโปรแกรมเว็ป
           </h1>
           <p class="text-center my-4">
-            <a href="./content" id="readme-btn" class="btn">อ่านเพิ่มเติม</a>
+            <a
+              href="./content"
+              id="readme-btn"
+              class="btn bg-primary text-primary-content"
+              >อ่านเพิ่มเติม</a
+            >
           </p>
 
           <div class="md:p-6 absolute">
@@ -132,7 +136,7 @@
           delay: 1.5,
           duration: 2,
           opacity: 1,
-          ease: "power1.out",
+          ease: "power1.inOut",
         },
       );
       gsap.to("#readme-btn", {

@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en" data-theme="autumn" class="w-full">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../style.css" rel="stylesheet" />
+    <script src="../assets/gsap.all.js"></script>
+    <script src="../assets/gsap.min.js"></script>
+    <script src="../assets/jquery.min.js"></script>
+
+    <title>Document</title>
+  </head>
+
+  <body class="w-full static">
+    <nav class="fixed top-0 left-0 w-full p-2 z-50">
+      <div class="card shadow border glass z-50">
+        <div class="navbar w-full">
+          <div class="navbar-start">
+            <details class="dropdown">
+              <summary class="btn btn-ghost lg:hidden">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h8m-8 6h16"
+                  />
+                </svg>
+              </summary>
+              <ul
+                class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              >
+                <li><a href="../">Home</a></li>
+                <li><a href="../content">Content</a></li>
+                <li><a href="../about">About</a></li>
+              </ul>
+            </details>
+            <a href="./" class="btn btn-ghost text-xl">SupassTech</a>
+          </div>
+          <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+              <li><a href="../">Home</a></li>
+              <li><a href="../content">Content</a></li>
+              <li><a href="../about">About</a></li>
+            </ul>
+          </div>
+          <div class="navbar-end">
+          </div>
+        </div>
+      </div>
+    </nav>
+    <main class="w-full mb-12 mt-24">
+      <section class="w-full flex justify-center mb-6">
+        <div class="stack w-full">
+          <div
+            class="card w-10/12 h-fit bg-primary shadow-md text-primary-content overflow-hidden"
+          >
+            <div class="card-body">
+              <h2 class="card-title text-4xl">เนื้อหา</h2>
+              <p>เทคโนโลยีต่างๆที่เกี่ยวกับการเขียนโปรแกรมเว็ป</p>
+              <div class="card-actions justify-end"></div>
+            </div>
+          </div>
+          <div
+            class="card w-10/12 h-fit bg-secondary shadow text-primary-content overflow-hidden"
+          >
+            <div class="card-body">
+              <h2 class="card-title text-4xl">เนื้อหา</h2>
+              <p>เทคโนโลยีต่างๆที่เกี่ยวกับการเขียนโปรแกรมเว็ป</p>
+              <div class="card-actions justify-end"></div>
+            </div>
+          </div>
+          <div
+            class="card w-10/12 h-fit bg-accent shadow-sm text-primary-content overflow-hidden"
+          >
+            <div class="card-body">
+              <h2 class="card-title text-4xl">เนื้อหา</h2>
+              <p>เทคโนโลยีต่างๆที่เกี่ยวกับการเขียนโปรแกรมเว็ป</p>
+              <div class="card-actions justify-end"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="w-full flex justify-center mb-12">
+        <article class="w-10/12">
+          <label>ค้นหา</label>
+          <div class="join w-full">
+            <div class="w-full">
+              <div class="w-full">
+                <input
+                  id="keyword"
+                  class="input input-bordered join-item w-full text-sm"
+                  placeholder="Search"
+                />
+              </div>
+            </div>
+            <select class="select select-bordered join-item w-1/6 text-sm">
+              <option disabled selected>Filter</option>
+            </select>
+            <div class="w-fit">
+              <button
+                onclick="searchContent()"
+                class="btn join-item w-full text-sm"
+              >
+                Search
+              </button>
+            </div>
+          </div>
+        </article>
+      </section>
+      <div
+        id="loaddingContent"
+        class="col-span-full w-full row-span-full flex justify-center py-20"
+      >
+        <span class="loading loading-bars loading-lg"></span>
+      </div>
+      <section class="w-full flex justify-center">
+        <article
+          id="contents"
+          class="w-10/12 grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"
+        ></article>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
