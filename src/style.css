@@ -2480,6 +2480,129 @@ html {
   grid-template-columns: auto 1fr;
 }
 
+.divider {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-self: stretch;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  height: 1rem;
+  white-space: nowrap;
+}
+
+.divider:before,
+  .divider:after {
+  height: 0.125rem;
+  width: 100%;
+  flex-grow: 1;
+  --tw-content: '';
+  content: var(--tw-content);
+  background-color: var(--fallback-bc,oklch(var(--bc)/0.1));
+}
+
+.drawer {
+  position: relative;
+  display: grid;
+  grid-auto-columns: max-content auto;
+  width: 100%;
+}
+
+.drawer-content {
+  grid-column-start: 2;
+  grid-row-start: 1;
+  min-width: 0px;
+}
+
+.drawer-side {
+  pointer-events: none;
+  position: fixed;
+  inset-inline-start: 0px;
+  top: 0px;
+  grid-column-start: 1;
+  grid-row-start: 1;
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  grid-template-rows: repeat(1, minmax(0, 1fr));
+  align-items: flex-start;
+  justify-items: start;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  height: 100vh;
+  height: 100dvh;
+}
+
+.drawer-side > .drawer-overlay {
+  position: sticky;
+  top: 0px;
+  place-self: stretch;
+  cursor: pointer;
+  background-color: transparent;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  transition-duration: 200ms;
+}
+
+.drawer-side > * {
+  grid-column-start: 1;
+  grid-row-start: 1;
+}
+
+.drawer-side > *:not(.drawer-overlay) {
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  transition-duration: 300ms;
+  will-change: transform;
+  transform: translateX(-100%);
+}
+
+[dir="rtl"] .drawer-side > *:not(.drawer-overlay) {
+  transform: translateX(100%);
+}
+
+.drawer-toggle {
+  position: fixed;
+  height: 0px;
+  width: 0px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  opacity: 0;
+}
+
+.drawer-toggle:checked ~ .drawer-side {
+  pointer-events: auto;
+  visibility: visible;
+}
+
+.drawer-toggle:checked ~ .drawer-side > *:not(.drawer-overlay) {
+  transform: translateX(0%);
+}
+
+.drawer-end .drawer-toggle ~ .drawer-content {
+  grid-column-start: 1;
+}
+
+.drawer-end .drawer-toggle ~ .drawer-side {
+  grid-column-start: 2;
+  justify-items: end;
+}
+
+.drawer-end .drawer-toggle ~ .drawer-side > *:not(.drawer-overlay) {
+  transform: translateX(100%);
+}
+
+[dir="rtl"] .drawer-end .drawer-toggle ~ .drawer-side > *:not(.drawer-overlay) {
+  transform: translateX(-100%);
+}
+
+.drawer-end .drawer-toggle:checked ~ .drawer-side > *:not(.drawer-overlay) {
+  transform: translateX(0%);
+}
+
 .dropdown {
   position: relative;
   display: inline-block;
@@ -2613,6 +2736,18 @@ html {
   @supports (color: oklch(0 0 0)) {
     .btn-ghost:hover {
       background-color: var(--fallback-bc,oklch(var(--bc)/0.2));
+    }
+  }
+
+  .btn-outline.btn-primary:hover {
+    --tw-text-opacity: 1;
+    color: var(--fallback-pc,oklch(var(--pc)/var(--tw-text-opacity)));
+  }
+
+  @supports (color: color-mix(in oklab, black, black)) {
+    .btn-outline.btn-primary:hover {
+      background-color: color-mix(in oklab, var(--fallback-p,oklch(var(--p)/1)) 90%, black);
+      border-color: color-mix(in oklab, var(--fallback-p,oklch(var(--p)/1)) 90%, black);
     }
   }
 
@@ -3229,8 +3364,19 @@ html {
     border-color: var(--btn-color, var(--fallback-b2));
   }
 
+  .btn-primary {
+    --btn-color: var(--fallback-p);
+  }
+
   .prose :where(code):not(:where([class~="not-prose"] *, pre *)) {
     background-color: var(--fallback-b3,oklch(var(--b3)/1));
+  }
+}
+
+@supports (color: color-mix(in oklab, black, black)) {
+  .btn-outline.btn-primary.btn-active {
+    background-color: color-mix(in oklab, var(--fallback-p,oklch(var(--p)/1)) 90%, black);
+    border-color: color-mix(in oklab, var(--fallback-p,oklch(var(--p)/1)) 90%, black);
   }
 }
 
@@ -3238,6 +3384,18 @@ html {
   outline-style: solid;
   outline-width: 2px;
   outline-offset: 2px;
+}
+
+.btn-primary {
+  --tw-text-opacity: 1;
+  color: var(--fallback-pc,oklch(var(--pc)/var(--tw-text-opacity)));
+  outline-color: var(--fallback-p,oklch(var(--p)/1));
+}
+
+@supports (color: oklch(0 0 0)) {
+  .btn-primary {
+    --btn-color: var(--p);
+  }
 }
 
 .btn.glass {
@@ -3266,6 +3424,16 @@ html {
 .btn-ghost.btn-active {
   border-color: transparent;
   background-color: var(--fallback-bc,oklch(var(--bc)/0.2));
+}
+
+.btn-outline.btn-primary {
+  --tw-text-opacity: 1;
+  color: var(--fallback-p,oklch(var(--p)/var(--tw-text-opacity)));
+}
+
+.btn-outline.btn-primary.btn-active {
+  --tw-text-opacity: 1;
+  color: var(--fallback-pc,oklch(var(--pc)/var(--tw-text-opacity)));
 }
 
 .btn.btn-disabled,
@@ -3413,6 +3581,20 @@ html {
   100% {
     background-position-y: 0;
   }
+}
+
+.divider:not(:empty) {
+  gap: 1rem;
+}
+
+.drawer-toggle:checked ~ .drawer-side > .drawer-overlay {
+  background-color: #0006;
+}
+
+.drawer-toggle:focus-visible ~ .drawer-content label.drawer-button {
+  outline-style: solid;
+  outline-width: 2px;
+  outline-offset: 2px;
 }
 
 .dropdown.dropdown-open .dropdown-content,
@@ -4402,6 +4584,32 @@ html {
   border-top-width: 4px;
 }
 
+.drawer-open > .drawer-toggle {
+  display: none;
+}
+
+.drawer-open > .drawer-toggle ~ .drawer-side {
+  pointer-events: auto;
+  visibility: visible;
+  position: sticky;
+  display: block;
+  width: auto;
+  overscroll-behavior: auto;
+}
+
+.drawer-open > .drawer-toggle ~ .drawer-side > *:not(.drawer-overlay) {
+  transform: translateX(0%);
+}
+
+[dir="rtl"] .drawer-open > .drawer-toggle ~ .drawer-side > *:not(.drawer-overlay) {
+  transform: translateX(0%);
+}
+
+.drawer-open > .drawer-toggle:checked ~ .drawer-side {
+  pointer-events: auto;
+  visibility: visible;
+}
+
 .join.join-vertical {
   flex-direction: column;
 }
@@ -4483,6 +4691,11 @@ html {
 
 .card-normal .card-title {
   margin-bottom: 0.75rem;
+}
+
+.drawer-open > .drawer-toggle ~ .drawer-side > .drawer-overlay {
+  cursor: default;
+  background-color: transparent;
 }
 
 .join.join-vertical > :where(*:not(:first-child)) {
@@ -4631,6 +4844,10 @@ html {
   grid-row: 1 / -1;
 }
 
+.m-0 {
+  margin: 0px;
+}
+
 .my-2 {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
@@ -4659,6 +4876,10 @@ html {
 
 .mt-3 {
   margin-top: 0.75rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
 }
 
 .block {
@@ -4693,6 +4914,10 @@ html {
   display: none;
 }
 
+.aspect-video {
+  aspect-ratio: 16 / 9;
+}
+
 .h-16 {
   height: 4rem;
 }
@@ -4708,6 +4933,42 @@ html {
 
 .h-screen {
   height: 100vh;
+}
+
+.h-2 {
+  height: 0.5rem;
+}
+
+.h-20 {
+  height: 5rem;
+}
+
+.h-24 {
+  height: 6rem;
+}
+
+.h-48 {
+  height: 12rem;
+}
+
+.h-32 {
+  height: 8rem;
+}
+
+.h-28 {
+  height: 7rem;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.max-h-none {
+  max-height: none;
+}
+
+.min-h-full {
+  min-height: 100%;
 }
 
 .w-1\/6 {
@@ -4733,6 +4994,14 @@ html {
 
 .w-full {
   width: 100%;
+}
+
+.w-80 {
+  width: 20rem;
+}
+
+.w-auto {
+  width: auto;
 }
 
 .max-w-none {
@@ -4801,6 +5070,10 @@ html {
   border-width: 1px;
 }
 
+.border-b {
+  border-bottom-width: 1px;
+}
+
 .bg-accent {
   --tw-bg-opacity: 1;
   background-color: var(--fallback-a,oklch(var(--a)/var(--tw-bg-opacity)));
@@ -4831,8 +5104,55 @@ html {
   background-color: var(--fallback-s,oklch(var(--s)/var(--tw-bg-opacity)));
 }
 
+.bg-\[\] {
+  background-color: ;
+}
+
+.bg-accent-content {
+  --tw-bg-opacity: 1;
+  background-color: var(--fallback-ac,oklch(var(--ac)/var(--tw-bg-opacity)));
+}
+
+.bg-primary-content {
+  --tw-bg-opacity: 1;
+  background-color: var(--fallback-pc,oklch(var(--pc)/var(--tw-bg-opacity)));
+}
+
+.bg-\[url\(\)\] {
+  background-image: url();
+}
+
+.bg-\[url\(\.\.\/\)\] {
+  background-image: url(../);
+}
+
+.bg-\[url\(\.\.\/assets\/holder\.png\)\] {
+  background-image: url(../assets/holder.png);
+}
+
+.object-cover {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .p-2 {
   padding: 0.5rem;
+}
+
+.p-4 {
+  padding: 1rem;
+}
+
+.p-6 {
+  padding: 1.5rem;
+}
+
+.p-12 {
+  padding: 3rem;
+}
+
+.p-0 {
+  padding: 0px;
 }
 
 .px-1 {
@@ -4843,6 +5163,20 @@ html {
 .py-20 {
   padding-top: 5rem;
   padding-bottom: 5rem;
+}
+
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.px-12 {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+.pt-24 {
+  padding-top: 6rem;
 }
 
 .text-center {
@@ -4880,6 +5214,11 @@ html {
 .text-primary-content {
   --tw-text-opacity: 1;
   color: var(--fallback-pc,oklch(var(--pc)/var(--tw-text-opacity)));
+}
+
+.text-base-content {
+  --tw-text-opacity: 1;
+  color: var(--fallback-bc,oklch(var(--bc)/var(--tw-text-opacity)));
 }
 
 .shadow {
@@ -4932,6 +5271,39 @@ body {
 body {
   height: auto;
   font-family: "Noto Sans Thai", sans-serif;
+}
+
+@media (min-width: 1024px) {
+  .lg\:drawer-open > .drawer-toggle {
+    display: none;
+  }
+
+  .lg\:drawer-open > .drawer-toggle ~ .drawer-side {
+    pointer-events: auto;
+    visibility: visible;
+    position: sticky;
+    display: block;
+    width: auto;
+    overscroll-behavior: auto;
+  }
+
+  .lg\:drawer-open > .drawer-toggle ~ .drawer-side > *:not(.drawer-overlay) {
+    transform: translateX(0%);
+  }
+
+  [dir="rtl"] .lg\:drawer-open > .drawer-toggle ~ .drawer-side > *:not(.drawer-overlay) {
+    transform: translateX(0%);
+  }
+
+  .lg\:drawer-open > .drawer-toggle:checked ~ .drawer-side {
+    pointer-events: auto;
+    visibility: visible;
+  }
+
+  .lg\:drawer-open > .drawer-toggle ~ .drawer-side > .drawer-overlay {
+    cursor: default;
+    background-color: transparent;
+  }
 }
 
 @media (min-width: 768px) {

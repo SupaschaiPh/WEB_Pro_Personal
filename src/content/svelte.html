@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en" data-theme="autumn" class="w-full">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../style.css" rel="stylesheet" />
+    <script src="../assets/gsap.all.js"></script>
+    <script src="../assets/gsap.min.js"></script>
+    <script src="../assets/jquery.min.js"></script>
+
+    <title>Document</title>
+</head>
+
+<body class="w-full static">
+    <nav class="fixed top-0 left-0 w-full p-2 z-50">
+        <div class="card shadow border glass z-50">
+            <div class="navbar w-full">
+                <div class="navbar-start">
+                    <details class="dropdown">
+                        <summary class="btn btn-ghost lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </summary>
+                        <ul class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                            <li><a href="../">Home</a></li>
+                            <li><a href="../content">Content</a></li>
+                            <li><a href="../about">About</a></li>
+                        </ul>
+                    </details>
+                    <a href="./" class="btn btn-ghost text-xl">SupassTech</a>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                    <ul class="menu menu-horizontal px-1">
+                        <li><a href="../">Home</a></li>
+                        <li><a href="../content">Content</a></li>
+                        <li><a href="../about">About</a></li>
+                    </ul>
+                </div>
+                <div class="navbar-end">
+                    <label for="my-drawer-2" class="btn btn-primary drawer-button lg:hidden">สารบัญ</label>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main class="w-full">
+        <div class="drawer lg:drawer-open">
+            <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
+            <div class="drawer-content mt-24 px-6">
+                <!-- Page content here -->
+                <div class="card shadow flex justify-center px-12 bg-accent ">
+                    <figure>
+                        <img class="card w-auto h-48" src="../api/images/svelte.webp" />
+                    </figure>
+                </div>
+                <div id="content-container" class="prose max-w-none mt-4">
+                    <h2 class="m-0 p-0">รู้จัก Svelte เฟรมเวิร์คจาวาสคริปต์ที่นักพัฒนาบน Stack Overflow โหวตว่ารักที่สุด</h2>
+                    <sub><a href="https://www.blognone.com/node/124506">ที่มา : https://www.blognone.com/node/124506</a></sub>
+            
+
+                </div>
+            </div>
+            <div class="drawer-side">
+                <label for="my-drawer-2" aria-label="close sidebar" class="drawer-overlay"></label>
+                <ul class="menu p-4 w-80 min-h-full bg-base-200 text-base-content pt-24">
+                    <!-- Sidebar content here -->
+                    <li><b>สารบัญ</b></li>
+                    <li><a>Sidebar Item 1</a></li>
+                    <li><a>Sidebar Item 2</a></li>
+                </ul>
+
+            </div>
+        </div>
+        </section>
+    </main>
+
+</body>
+
+</html>
