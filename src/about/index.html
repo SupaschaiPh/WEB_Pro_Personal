@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en" data-theme="autumn" class="w-full">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../style.css" rel="stylesheet" />
+    <script src="../assets/gsap.all.js"></script>
+    <script src="../assets/gsap.min.js"></script>
+    <script src="../assets/jquery.min.js"></script>
+
+    <title>Document</title>
+</head>
+
+<body class="w-full static">
+    <nav class="fixed top-0 left-0 w-full p-2 z-50">
+        <div class="card shadow border glass z-50">
+            <div class="navbar w-full">
+                <div class="navbar-start">
+                    <details class="dropdown">
+                        <summary class="btn btn-ghost lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </summary>
+                        <ul class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                            <li><a href="../">Home</a></li>
+                            <li><a href="../content">Content</a></li>
+                            <li><a href="../about">About</a></li>
+                        </ul>
+                    </details>
+                    <a href="./" class="btn btn-ghost text-xl">SupassTech</a>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                    <ul class="menu menu-horizontal px-1">
+                        <li><a href="../">Home</a></li>
+                        <li><a href="../content">Content</a></li>
+                        <li><a href="../about">About</a></li>
+                    </ul>
+                </div>
+                <div class="navbar-end">
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main class="w-full mb-12 mt-24">
+        <section class="w-full flex justify-center">
+            <article class="w-10/12">
+                <div class="card h-fit  overflow-hidden">
+                    <div class="card-body">
+                        <h2 class="card-title text-4xl">รายละเอียดเกี่ยวกับเว็บนี้</h2>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <section class="w-full flex justify-center mb-6">
+            <article class="max-w-none w-10/12">
+                <div class="card shadow border md:mx-6">
+                    <div class="card-body">
+                        <div class="prose max-w-none">
+                            <h2>โครงงานส่วนบุคคล ครั้งที่ 1</h2>
+                            <p>ให้นักศึกษาสร้างเว็ปเพจที่มีเนื้อหาเกี่ยวกับ
+                                เทคโนโลยีต่างๆที่เกี่ยวกับการเขียนโปรแกรมเว็ป
+                                เช่น การภาษาเขียนโปรแกรม เฟรมเวิร์ค ฐานข้อมูลและอื่นๆที่เกี่ยวข้อง</p>
+                            <ol>
+                                <li>เนื้อหาเป็นภาษาไทยหรืออังกฤษ มีเนื้อหาไม่ต่ำกว่า 10 หน้ากระดาษ A4
+                                    (เทียบเท่าโดยประมาณ)
+                                </li>
+                                <li>เว็ปที่สร้างขึ้นจะต้องเป็นผลงานของนักศึกษา มิใช่การคัดลอกมา</li>
+                                <li>ให้ระบุลิงก์ของเอกสารต้นฉบับเนื้อหาทั้งหมดที่นำมาใช้ไว้ในส่วน
+                                    เอกสารอ้างอิง(references)
+                                    ด้วย</li>
+                                <li>ส่งภายในวันที่ 5 กุมภาพันธ์ 2567 ให้เก็บไว้ที่ /project/</li>
+                            </ol>
+                            <div class="w-full text-end">
+                                <sub>จัดทำโดย supaschai ph</sub>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <section class="w-full flex flex-col items-center">
+            <article class="w-10/12">
+                <div class="card h-fit  overflow-hidden">
+                    <div class="card-body">
+                        <h2 class="card-title text-4xl">เทคโนโลยีที่ใช้</h2>
+                    </div>
+                </div>
+                </div>
+            </article>
+            <article class="w-10/12 md:px-6">
+                <div class="stats shadow border w-full rounded-b-none">
+                    <div class="stat place-items-center">
+                        <div class="stat-value flex justify-center my-2 overflow-hidden">
+                            <img width="100%" class="h-16" src="../assets/HTML.png" alt="HTML" />
+                        </div>
+                        <div class="stat-desc">HTML</div>
+                    </div>
+
+                    <div class="stat place-items-center">
+                        <div class="stat-value flex justify-center my-2 overflow-hidden">
+                            <img width="100%" class="h-16" src="../assets/CSS.png" alt="CSS" />
+                        </div>
+                        <div class="stat-desc">CSS</div>
+                    </div>
+
+                    <div class="stat place-items-center">
+                        <div class="stat-value flex justify-center my-2 overflow-hidden">
+                            <img width="100%" class="h-16" src="../assets/JS.png" alt="JS" />
+                        </div>
+                        <div class="stat-desc">JavaScript</div>
+                    </div>
+                </div>
+                <div class="stats shadow border w-full rounded-t-none">
+                    <div class="stat place-items-center">
+                        <div class="stat-value flex justify-center my-2 overflow-hidden">
+                            <img width="100%" class="h-16" src="../assets/TailwindCSS.png" alt="tailwindcss" />
+                        </div>
+                        <div class="stat-desc">Tailwindcss</div>
+                    </div>
+
+                    <div class="stat place-items-center">
+                        <div class="stat-value flex justify-center ">
+                            <img width="100%" class="h-16" src="../assets/jquery.png" alt="Jquery" />
+
+                        </div>
+                        <div class="stat-desc">Jquery</div>
+                    </div>
+
+                    <div class="stat place-items-center">
+                        <div class="stat-value flex justify-center my-2 overflow-hidden">
+                            <img width="100%" class="h-16" src="../assets/Daisy.png" alt="Daisy" />
+                        </div>
+                        <div class="stat-desc">Daisy</div>
+                    </div>
+
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>

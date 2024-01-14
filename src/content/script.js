@@ -27,7 +27,7 @@ function createContentCard(
   cardBody.appendChild(cardTitle, cardDesc);
 
   goButton.appendChild(document.createTextNode("อ่านเพิ่มเติม"));
-  goButton.setAttribute("href","./"+contentId)
+  goButton.setAttribute("href", "./" + contentId);
 
   card.appendChild(figure);
   card.appendChild(cardBody);
