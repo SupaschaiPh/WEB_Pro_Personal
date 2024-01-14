@@ -1,22 +1,22 @@
 [
   {
-    "title": "Hello World1",
-    "desc": "demo content",
-    "content": "no",
+    "title": "svelte",
+    "desc": "เว็บเฟรมเวิร์คที่นักพัฒนา \"รัก\" มากที่สุด (most loved web framework)",
+    "path": "svelte.html",
     "tags": [],
-    "coverURL": ""
+    "coverURL": "../api/images/svelte.webp"
   },
   {
     "title": "Hello World2",
     "desc": "demo content",
-    "content": "no",
+    "path": "no",
     "tags": [],
     "coverURL": ""
   },
   {
     "title": "Hello World3",
     "desc": "demo content",
-    "content": "no",
+    "path": "no",
     "tags": [],
     "coverURL": ""
   }
