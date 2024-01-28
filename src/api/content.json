@@ -29,8 +29,8 @@
   },
   {
     "title": "</>htmx",
-    "desc": "demo content",
-    "path": "jquery.html",
+    "desc": "htmx เครื่องมือสุดทรงพลังสำหรับ HTML",
+    "path": "htmx.html",
     "tags": [],
     "coverURL": "../api/images/htmx_cv.png"
   },
