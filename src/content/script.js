@@ -1,11 +1,6 @@
 let contents = [];
 
-function createContentCard(
-  title = "",
-  desc = "",
-  coverURL ,
-  contentId,
-) {
+function createContentCard(title = "", desc = "", coverURL, contentId) {
   const card = document.createElement("div");
   const figure = document.createElement("figure");
   const cover = document.createElement("img");
@@ -19,11 +14,16 @@ function createContentCard(
   cardBody.setAttribute("class", "card-body");
   goButton.setAttribute("class", "btn w-full rounded-t-none");
 
-  $.get(coverURL).done(
-    ()=>{cover.setAttribute("src", coverURL&&coverURL !="" ? coverURL : "../assets/holder.png");}
-  ).catch(
-    ()=>{cover.setAttribute("src",  "../assets/holder.png");}
-  )
+  $.get(coverURL)
+    .done(() => {
+      cover.setAttribute(
+        "src",
+        coverURL && coverURL != "" ? coverURL : "../assets/holder.png",
+      );
+    })
+    .catch(() => {
+      cover.setAttribute("src", "../assets/holder.png");
+    });
   cover.setAttribute("alt", "coverImage");
 
   cover.setAttribute("class", "w-full aspect-video object-cover border-b");
@@ -33,7 +33,6 @@ function createContentCard(
   cardDesc.appendChild(document.createTextNode(desc));
   cardBody.appendChild(cardTitle);
   cardBody.appendChild(cardDesc);
-
 
   goButton.appendChild(document.createTextNode("อ่านเพิ่มเติม"));
   goButton.setAttribute("href", "./" + contentId);
@@ -52,9 +51,9 @@ async function loadContent() {
     for (let content of contents) {
       createContentCard(
         content.title,
-        content.desc.slice(0,71)+"...",
+        content.desc.slice(0, 71) + "...",
         content.coverURL,
-        content.path
+        content.path,
       );
     }
     $("#loaddingContent").remove();
@@ -73,7 +72,7 @@ function searchContent() {
   )) {
     createContentCard(
       content.title,
-      content.desc.slice(0,71)+"...",
+      content.desc.slice(0, 71) + "...",
       content.coverURL,
       content.path,
     );
