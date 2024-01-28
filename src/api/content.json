@@ -8,7 +8,7 @@
   },
   {
     "title": "Bootstrap",
-    "desc": "demo content",
+    "desc": "Bootstrap ชุดเครื่องมือ CSS ช่วยให้นักพัฒนาสร้างเว็บไซต์และแอปพลิเคชันเว็บได้อย่างยอดเยี่ยม",
     "path": "bootstrap.html",
     "tags": [],
     "coverURL": "../api/images/bootstrap_cv.png"
