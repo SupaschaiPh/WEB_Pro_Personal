@@ -1,23 +1,68 @@
 [
   {
-    "title": "svelte",
+    "title": "Svelte",
     "desc": "เว็บเฟรมเวิร์คที่นักพัฒนา \"รัก\" มากที่สุด (most loved web framework)",
     "path": "svelte.html",
     "tags": [],
     "coverURL": "../api/images/svelte.webp"
   },
   {
-    "title": "Hello World2",
+    "title": "Bootstrap",
     "desc": "demo content",
-    "path": "no",
+    "path": "bootstrap.html",
     "tags": [],
-    "coverURL": ""
+    "coverURL": "../api/images/bootstrap_cv.png"
   },
   {
-    "title": "Hello World3",
+    "title": "jQuery",
     "desc": "demo content",
-    "path": "no",
+    "path": "jquery.html",
     "tags": [],
-    "coverURL": ""
+    "coverURL": "../api/images/jQuery_cv.png"
+  },
+  {
+    "title": "</>htmx",
+    "desc": "demo content",
+    "path": "jquery.html",
+    "tags": [],
+    "coverURL": "../api/images/htmx_cv.png"
+  },
+  {
+    "title": "Nginx",
+    "desc": "demo content",
+    "path": "nginx.html",
+    "tags": [],
+    "coverURL": "../api/images/nginx_cv.png"
+  },
+  {
+    "title": "Apache",
+    "desc": "demo content",
+    "path": "apache.html",
+    "tags": [],
+    "coverURL": "../api/images/apache_cv.png"
+  },{
+    "title": "Chrome",
+    "desc": "demo content",
+    "path": "chorme.html",
+    "tags": [],
+    "coverURL": "../api/images/chrome_cv.png"
+  },{
+    "title": "Firefox",
+    "desc": "demo content",
+    "path": "firefox.html",
+    "tags": [],
+    "coverURL": "../api/images/firefox_cv.png"
+  },{
+    "title": "Netscape",
+    "desc": "demo content",
+    "path": "netscape.html",
+    "tags": [],
+    "coverURL": "../api/images/netscape_cv.png"
+  },{
+    "title": "HTTP",
+    "desc": "demo content",
+    "path": "http.html",
+    "tags": [],
+    "coverURL": "../api/images/http_cv.png"
   }
 ]
