@@ -26,7 +26,10 @@ function createContentCard(title = "", desc = "", coverURL, contentId) {
     });
   cover.setAttribute("alt", "coverImage");
 
-  cover.setAttribute("class", "w-full aspect-video object-cover border-b bg-white");
+  cover.setAttribute(
+    "class",
+    "w-full aspect-video object-cover border-b bg-white",
+  );
   figure.appendChild(cover);
 
   cardTitle.appendChild(document.createTextNode(title));
@@ -47,7 +50,7 @@ function createContentCard(title = "", desc = "", coverURL, contentId) {
 async function loadContent() {
   try {
     contents = await $.getJSON("../api/content.json");
-    console.log(contents.sort((a,b)=>a.title>b.title ? 1 : -1));
+    console.log(contents.sort((a, b) => (a.title > b.title ? 1 : -1)));
     for (let content of contents) {
       createContentCard(
         content.title,

@@ -14,7 +14,7 @@ function smoothScroll(target) {
   $.smoothScroll({
     scrollElement: $("#main-content"),
     scrollTarget: $(target),
-    offset: -80
+    offset: -80,
   });
 }
 
