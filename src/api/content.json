@@ -1,23 +1,86 @@
 [
   {
-    "title": "svelte",
+    "title": "Svelte",
     "desc": "เว็บเฟรมเวิร์คที่นักพัฒนา \"รัก\" มากที่สุด (most loved web framework)",
     "path": "svelte.html",
     "tags": [],
     "coverURL": "../api/images/svelte.webp"
   },
   {
-    "title": "Hello World2",
-    "desc": "demo content",
-    "path": "no",
+    "title": "Bootstrap",
+    "desc": "Bootstrap ชุดเครื่องมือ CSS ช่วยให้นักพัฒนาสร้างเว็บไซต์และแอปพลิเคชันเว็บได้อย่างยอดเยี่ยม",
+    "path": "bootstrap.html",
     "tags": [],
-    "coverURL": ""
+    "coverURL": "../api/images/bootstrap_cv.png"
   },
   {
-    "title": "Hello World3",
+    "title": "jQuery",
     "desc": "demo content",
-    "path": "no",
+    "path": "jquery.html",
     "tags": [],
-    "coverURL": ""
+    "coverURL": "../api/images/jQuery_cv.png"
+  },
+  {
+    "title": "jQuery UI",
+    "desc": "demo content",
+    "path": "jqueryui.html",
+    "tags": [],
+    "coverURL": "../api/images/jQueryUI_cv.png"
+  },
+  {
+    "title": "</>htmx",
+    "desc": "demo content",
+    "path": "jquery.html",
+    "tags": [],
+    "coverURL": "../api/images/htmx_cv.png"
+  },
+  {
+    "title": "Nginx",
+    "desc": "demo content",
+    "path": "nginx.html",
+    "tags": ["Web server"],
+    "coverURL": "../api/images/nginx_cv.png"
+  },
+  {
+    "title": "Apache",
+    "desc": "demo content",
+    "path": "apache.html",
+    "tags": ["Web server"],
+    "coverURL": "../api/images/apache_cv.png"
+  },
+  {
+    "title": "Chrome",
+    "desc": "demo content",
+    "path": "chorme.html",
+    "tags": ["Web browser"],
+    "coverURL": "../api/images/chrome_cv.png"
+  },
+  {
+    "title": "Firefox",
+    "desc": "demo content",
+    "path": "firefox.html",
+    "tags": ["Web browser"],
+    "coverURL": "../api/images/firefox_cv.png"
+  },
+  {
+    "title": "Netscape",
+    "desc": "demo content",
+    "path": "netscape.html",
+    "tags": ["Web browser"],
+    "coverURL": "../api/images/netscape_cv.png"
+  },
+  {
+    "title": "Internet Explorer",
+    "desc": "demo content",
+    "path": "ie.html",
+    "tags": ["Web browser"],
+    "coverURL": "../api/images/ie_cv.png"
+  },
+  {
+    "title": "XAMPP",
+    "desc": "demo content",
+    "path": "xampp.html",
+    "tags": [],
+    "coverURL": "../api/images/xampp_cv.png"
   }
 ]
