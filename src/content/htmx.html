@@ -1,166 +1,241 @@
 <!doctype html>
 <html lang="en" data-theme="autumn" class="w-full">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="../style.css" rel="stylesheet" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="../assets/jquery.min.js"></script>
     <script src="../assets/jquery.smoothScroll.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet" />
     <title>htmx</title>
-</head>
+  </head>
 
-<body class="w-full h-full static overflow-hidden">
+  <body class="w-full h-full static overflow-hidden">
     <nav class="fixed top-0 left-0 w-full p-2 z-50">
-        <div class="card shadow border glass z-50">
-            <div class="navbar w-full">
-                <div class="navbar-start">
-                    <details class="dropdown">
-                        <summary class="btn btn-ghost lg:hidden">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M4 6h16M4 12h8m-8 6h16" />
-                            </svg>
-                        </summary>
-                        <ul class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                            <li><a href="../">Home</a></li>
-                            <li><a href="../content">Content</a></li>
-                            <li><a href="../about">About</a></li>
-                        </ul>
-                    </details>
-                    <a href="./" class="btn btn-ghost text-xl">SupassTech</a>
-                </div>
-                <div class="navbar-center hidden lg:flex">
-                    <ul class="menu menu-horizontal px-1">
-                        <li><a href="../">Home</a></li>
-                        <li><a href="../content">Content</a></li>
-                        <li><a href="../about">About</a></li>
-                    </ul>
-                </div>
-                <div class="navbar-end">
-                    <label for="my-drawer-2" class="btn btn-primary drawer-button lg:hidden">สารบัญ</label>
-                </div>
-            </div>
+      <div class="card shadow border glass z-50">
+        <div class="navbar w-full">
+          <div class="navbar-start">
+            <details class="dropdown">
+              <summary class="btn btn-ghost lg:hidden">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h8m-8 6h16"
+                  />
+                </svg>
+              </summary>
+              <ul
+                class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              >
+                <li><a href="../">Home</a></li>
+                <li><a href="../content">Content</a></li>
+                <li><a href="../about">About</a></li>
+              </ul>
+            </details>
+            <a href="./" class="btn btn-ghost text-xl">SupassTech</a>
+          </div>
+          <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+              <li><a href="../">Home</a></li>
+              <li><a href="../content">Content</a></li>
+              <li><a href="../about">About</a></li>
+            </ul>
+          </div>
+          <div class="navbar-end">
+            <label
+              for="my-drawer-2"
+              class="btn btn-primary drawer-button lg:hidden"
+              >สารบัญ</label
+            >
+          </div>
         </div>
+      </div>
     </nav>
     <main class="w-full h-full overflow-hidden">
-        <div class="drawer lg:drawer-open h-full overflow-hidden">
-            <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
-            <div id="main-content" class="drawer-content pb-12 pt-24 px-6 overflow-y-auto h-full">
-                <!-- Page content here -->
-                <div class="card shadow flex justify-center px-12 bg-white">
-                    <figure>
-                        <img class="card w-auto h-48" src="../api/images/htmx_logo.png" />
-                    </figure>
-                </div>
-                <div id="content-container" class="prose max-w-none mt-4">
-                    <h2>
-                        htmx เครื่องมือสุดทรงพลังสำหรับ HTML
-                    </h2>
-                    <sub><a href="https://htmx.org/">ที่มา : https://htmx.org/</a></sub>
+      <div class="drawer lg:drawer-open h-full overflow-hidden">
+        <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
+        <div
+          id="main-content"
+          class="drawer-content pb-12 pt-24 px-6 overflow-y-auto h-full"
+        >
+          <div class="card shadow flex justify-center px-12 bg-white">
+            <figure>
+              <img class="card w-auto h-48" src="../api/images/htmx_logo.png" />
+            </figure>
+          </div>
+          <div id="content-container" class="prose max-w-none mt-4">
+            <h2>htmx เครื่องมือสุดทรงพลังสำหรับ HTML</h2>
+            <sub><a href="https://htmx.org/">ที่มา : https://htmx.org/</a></sub>
 
-                    <p>htmx ให้คุณเข้าถึง AJAX, CSS Transitions, WebSockets และ Server Sent Events โดยตรงใน HTML โดยใช้
-                        attributes ทำให้คุณสามารถสร้างอินเตอร์เฟซผู้ใช้ที่ทันสมัยด้วยความง่ายและพลังของ hypertext </p>
-                    <p>htmx เป็นขนาดเล็ก (~14k min.gz), ไม่มี dependencies, สามารถขยายได้, สามารถใช้กับ IE11 ได้,
-                        และลดขนาดของโค้ดbaseลดลงถึง 67% เมื่อเทียบกับ react</p>
+            <p>
+              htmx ให้คุณเข้าถึง AJAX, CSS Transitions, WebSockets และ Server
+              Sent Events โดยตรงใน HTML โดยใช้ attributes
+              ทำให้คุณสามารถสร้างอินเตอร์เฟซผู้ใช้ที่ทันสมัยด้วยความง่ายและพลังของ
+              hypertext
+            </p>
+            <p>
+              htmx เป็นขนาดเล็ก (~14k min.gz), ไม่มี dependencies,
+              สามารถขยายได้, สามารถใช้กับ IE11 ได้, และลดขนาดของโค้ดbaseลดลงถึง
+              67% เมื่อเทียบกับ react
+            </p>
 
-                    <h3>ทำไมต้องใช้ htmx ล่ะ ?</h3>
-                    <p>htmxจะช่วยคุณแก้สิ่งที่เคืองใจแบบคำถามต่อไปนี้ได้</p>
-                    <ul>
-                        <li>ทำไมต้องมีเพียง &lt;a&gt; และ &lt;form&gt; เท่านั้นที่สามารถทำ HTTP requests ได้?</li>
-                        <li>ทำไมเหตุการณ์ click และ submit เท่านั้นที่จะกระตุ้นเหตุการณ์เหล่านี้?</li>
-                        <li>ทำไมเฉพาะเมธอด GET และ POST เท่านั้นที่จะสามารถใช้งานได้?</li>
-                        <li>ทำไมคุณต้องสามารถแทนที่หน้าจอทั้งหมดได้เท่านั้น?</li>
-                        <li>โดยการลบข้อจำกัดที่ไม่จำเป็นนี้, htmx ทำให้ HTML เติมเต็มเป็น hypertext ได้อย่างสมบูรณ์</li>
-                    </ul>
-                    <div class="flex justify-center w-full">
-                        <img class="card" width="90%" src="../api/images/htmx_web.png" />
-                    </div>
-
-                    <h2>htmx คืออะไร ?</h2>
-                    <p>htmx เป็นไลบรารีที่ช่วยให้คุณเข้าถึงคุณลักษณะของเบราว์เซอร์ที่ทันสมัยได้โดยตรงจาก HTML
-                        โดยไม่ต้องใช้ JavaScript.</p>
-                    <p>เพื่อที่จะเข้าใจ htmx, ก่อนอื่นเราจะมองไปที่แท็ก anchor:</p>
-                    <div class="mockup-code bg-slate-800">
-                        <pre class="bg-transparent"><code>&lt;a&nbsp;<span style="color: rgb(223, 48, 121)">href</span>=<span style="color: rgb(0, 166, 125)">&quot;/blog&quot;</span>&gt;Blog&lt;/a&gt;</code></pre>
-                    </div>
-                    <p>แท็ก anchor นี้บอกกับเบราว์เซอร์ว่า:</p>
-                    <div class="card bg-white p-3">
-                        <div class="chat chat-start">
-                            <div class="chat-header">
-                                Tag
-                                <time class="text-xs opacity-50">2 hours ago</time>
-                            </div>
-                            <q class="chat-bubble">
-                                เมื่อผู้ใช้คลิกที่ลิงก์นี้, ให้ทำการ HTTP GET request ไปยัง '/blog'
-                                และโหลดเนื้อหาของการตอบกลับลงในหน้าต่างของเบราว์เซอร์
-                            </q>
-                        </div>
-                        <div class="chat chat-end">
-                            <div class="chat-header">
-                                Browser
-                                <time class="text-xs opacity-50">now</time>
-                            </div>
-                            <q class="chat-bubble">รับแทรบ</q>
-                        </div>
-                    </div>
-                    <p>ด้วยความคิดนี้, พิจารณาโค้ด HTML ต่อไปนี้:</p>
-                    <div class="mockup-code bg-slate-800">
-                        <pre class="bg-transparent"><code>&lt;button&nbsp;<span style="color: rgb(223, 48, 121)">hx-post</span>=<span style="color: rgb(0, 166, 125)">&quot;/clicked&quot;</span><span style="color: rgb(223, 48, 121)">hx-trigger</span>=<span style="color: rgb(0, 166, 125)">&quot;click&quot;</span><span style="color: rgb(223, 48, 121)">hx-target</span>=<span style="color: rgb(0, 166, 125)">&quot;#parent-div&quot;&nbsp;</span><span style="color: rgb(223, 48, 121)">hx-swap</span>=<span style="color: rgb(0, 166, 125)">&quot;outerHTML&quot;</span>&gt;    Click Me!&lt;/button&gt;</code></pre>
-                    </div>
-                    <p>โค้ดนี้บอก htmx ว่า:</p>
-                    <div class="card bg-white p-3">
-                        <div class="chat chat-start">
-                            <div class="chat-header">
-                                Tag
-                                <time class="text-xs opacity-50">2 hours ago</time>
-                            </div>
-                            <q class="chat-bubble">
-                                เมื่อผู้ใช้คลิกที่ปุ่มนี้, ให้ทำการ HTTP POST request ไปยัง '/clicked' และใช้เนื้อหาจากการตอบกลับเพื่อแทนที่ element ที่มี id เป็น parent-div ใน DOM.
-                            </q>
-                        </div>
-                        <div class="chat chat-end">
-                            <div class="chat-header">
-                                Browser
-                                <time class="text-xs opacity-50">now</time>
-                            </div>
-                            <q class="chat-bubble">Ok👍</q>
-                        </div>
-                    </div>
-                    <p>htmx ขยายและทำให้ทวีความคิดหลักของ HTML ซึ่งเป็น hypertext โดยเปิดโอกาสให้มีความหลากหลายมากขึ้นโดยตรงกับภาษา: </p>
-                    <ul>
-                        <li>ตอนนี้ไม่ว่า element ใดๆก็ตามสามาถทำ HTTP request แม้ว่าจะไม่ป็น anchors tags หรือ forms ก็ตาม</li>
-                        <li>ตอนนี้ไม่ว่าจะเป็นเหตุการณ์ใด ๆ ไม่จำกัดอยู่แค่คลิกหรือการ submit form เท่านั้นที่จะทำให้เกิดเหตุการณ์&nbsp;request</li>
-                        <li>ตอนนี้ ไม่ว่าจะเป็น HTTP verb ใด ๆ ไม่จำเป็นต้องเป็น GET และ POST เท่านั้นที่จะถูกใช้</li>
-                        <li>ตอนนี้ ไม่ว่าจะเป็น element ใด ๆ ไม่จำเป็นต้องเป็นwindowทั้งหมดที่จะต้องเป็นเป้าหมายสำหรับการอัปเดตโดย request</li>
-                      </ul>
-                    <p>เมื่อใช้ htmx เซิร์ฟเวอร์ต้องตอบสนองด้วย HTML ไม่ใช่ JSON วิธีนี้ทำให้คุณยังคงอยู่ในโมเดลการเขียนโปรแกรมเว็บดั้งเดิมโดยใช้ "Hypertext As The Engine Of Application State" โดยไม่ต้องเข้าใจแนวคิดนั้นจริงๆ</p>                      
-                    <p>ควรกล่าวถึงด้วยว่า คุณสามารถใช้คำนำหน้า data- เมื่อใช้ htmx ได้ เช่น:                    </p>
-                    <div class="mockup-code bg-slate-800">
-                        <pre class="bg-transparent"><code>&lt;a&nbsp;<span style="color: rgb(223, 48, 121)">data-hx-post</span>=<span style="color: rgb(0, 166, 125)">&quot;/click&quot;</span>&gt;Click Me!&lt;/a&gt;</code></pre>
-                    </div>
-                    <h2>ใช้ยังไง</h2>
-                    <p>Htmx เป็นไลบรารี JavaScript ที่เน้นการใช้งานบนเบราว์เซอร์และไม่ต้องพึ่งพาไลบรารีอื่นๆ นั่นหมายถึงการใช้งานนั้นง่ายดายเพียงเพิ่มแท็ก &lt;script&gt; เข้าไปในส่วนหัวของเอกสารของคุณ ไม่จำเป็นต้องมีขั้นตอนหรือระบบ build ที่ซับซ้อน</p>
-                    <iframe src="https://replit.com/@SupaschaiPh/SKMIT-HTMX?embed=true" width="100%" height="600"></iframe>
-                </div>
+            <h3>ทำไมต้องใช้ htmx ล่ะ ?</h3>
+            <p>htmxจะช่วยคุณแก้สิ่งที่เคืองใจแบบคำถามต่อไปนี้ได้</p>
+            <ul>
+              <li>
+                ทำไมต้องมีเพียง &lt;a&gt; และ &lt;form&gt; เท่านั้นที่สามารถทำ
+                HTTP requests ได้?
+              </li>
+              <li>
+                ทำไมเหตุการณ์ click และ submit
+                เท่านั้นที่จะกระตุ้นเหตุการณ์เหล่านี้?
+              </li>
+              <li>ทำไมเฉพาะเมธอด GET และ POST เท่านั้นที่จะสามารถใช้งานได้?</li>
+              <li>ทำไมคุณต้องสามารถแทนที่หน้าจอทั้งหมดได้เท่านั้น?</li>
+              <li>
+                โดยการลบข้อจำกัดที่ไม่จำเป็นนี้, htmx ทำให้ HTML เติมเต็มเป็น
+                hypertext ได้อย่างสมบูรณ์
+              </li>
+            </ul>
+            <div class="flex justify-center w-full">
+              <img class="card" width="90%" src="../api/images/htmx_web.png" />
             </div>
-            <div class="drawer-side">
-                <label for="my-drawer-2" aria-label="close sidebar" class="drawer-overlay"></label>
-                <ul id="tableof-content" class="menu p-4 w-80 min-h-full bg-base-200 text-base-content pt-24">
-                    <!-- Sidebar content here -->
-                    <li><b>สารบัญ</b></li>
-                </ul>
+
+            <h2>htmx คืออะไร ?</h2>
+            <p>
+              htmx
+              เป็นไลบรารีที่ช่วยให้คุณเข้าถึงคุณลักษณะของเบราว์เซอร์ที่ทันสมัยได้โดยตรงจาก
+              HTML โดยไม่ต้องใช้ JavaScript.
+            </p>
+            <p>เพื่อที่จะเข้าใจ htmx, ก่อนอื่นเราจะมองไปที่แท็ก anchor:</p>
+            <div class="mockup-code bg-slate-800">
+              <pre
+                class="bg-transparent"
+              ><code>&lt;a&nbsp;<span style="color: rgb(223, 48, 121)">href</span>=<span style="color: rgb(0, 166, 125)">&quot;/blog&quot;</span>&gt;Blog&lt;/a&gt;</code></pre>
             </div>
+            <p>แท็ก anchor นี้บอกกับเบราว์เซอร์ว่า:</p>
+            <div class="card bg-white p-3">
+              <div class="chat chat-start">
+                <div class="chat-header">
+                  Tag
+                  <time class="text-xs opacity-50">2 hours ago</time>
+                </div>
+                <q class="chat-bubble">
+                  เมื่อผู้ใช้คลิกที่ลิงก์นี้, ให้ทำการ HTTP GET request ไปยัง
+                  '/blog' และโหลดเนื้อหาของการตอบกลับลงในหน้าต่างของเบราว์เซอร์
+                </q>
+              </div>
+              <div class="chat chat-end">
+                <div class="chat-header">
+                  Browser
+                  <time class="text-xs opacity-50">now</time>
+                </div>
+                <q class="chat-bubble">รับแทรบ</q>
+              </div>
+            </div>
+            <p>ด้วยความคิดนี้, พิจารณาโค้ด HTML ต่อไปนี้:</p>
+            <div class="mockup-code bg-slate-800">
+              <pre
+                class="bg-transparent"
+              ><code>&lt;button&nbsp;<span style="color: rgb(223, 48, 121)">hx-post</span>=<span style="color: rgb(0, 166, 125)">&quot;/clicked&quot;</span><span style="color: rgb(223, 48, 121)">hx-trigger</span>=<span style="color: rgb(0, 166, 125)">&quot;click&quot;</span><span style="color: rgb(223, 48, 121)">hx-target</span>=<span style="color: rgb(0, 166, 125)">&quot;#parent-div&quot;&nbsp;</span><span style="color: rgb(223, 48, 121)">hx-swap</span>=<span style="color: rgb(0, 166, 125)">&quot;outerHTML&quot;</span>&gt;    Click Me!&lt;/button&gt;</code></pre>
+            </div>
+            <p>โค้ดนี้บอก htmx ว่า:</p>
+            <div class="card bg-white p-3">
+              <div class="chat chat-start">
+                <div class="chat-header">
+                  Tag
+                  <time class="text-xs opacity-50">2 hours ago</time>
+                </div>
+                <q class="chat-bubble">
+                  เมื่อผู้ใช้คลิกที่ปุ่มนี้, ให้ทำการ HTTP POST request ไปยัง
+                  '/clicked' และใช้เนื้อหาจากการตอบกลับเพื่อแทนที่ element ที่มี
+                  id เป็น parent-div ใน DOM.
+                </q>
+              </div>
+              <div class="chat chat-end">
+                <div class="chat-header">
+                  Browser
+                  <time class="text-xs opacity-50">now</time>
+                </div>
+                <q class="chat-bubble">Ok👍</q>
+              </div>
+            </div>
+            <p>
+              htmx ขยายและทำให้ทวีความคิดหลักของ HTML ซึ่งเป็น hypertext
+              โดยเปิดโอกาสให้มีความหลากหลายมากขึ้นโดยตรงกับภาษา:
+            </p>
+            <ul>
+              <li>
+                ตอนนี้ไม่ว่า element ใดๆก็ตามสามาถทำ HTTP request แม้ว่าจะไม่ป็น
+                anchors tags หรือ forms ก็ตาม
+              </li>
+              <li>
+                ตอนนี้ไม่ว่าจะเป็นเหตุการณ์ใด ๆ ไม่จำกัดอยู่แค่คลิกหรือการ
+                submit form เท่านั้นที่จะทำให้เกิดเหตุการณ์&nbsp;request
+              </li>
+              <li>
+                ตอนนี้ ไม่ว่าจะเป็น HTTP verb ใด ๆ ไม่จำเป็นต้องเป็น GET และ
+                POST เท่านั้นที่จะถูกใช้
+              </li>
+              <li>
+                ตอนนี้ ไม่ว่าจะเป็น element ใด ๆ
+                ไม่จำเป็นต้องเป็นwindowทั้งหมดที่จะต้องเป็นเป้าหมายสำหรับการอัปเดตโดย
+                request
+              </li>
+            </ul>
+            <p>
+              เมื่อใช้ htmx เซิร์ฟเวอร์ต้องตอบสนองด้วย HTML ไม่ใช่ JSON
+              วิธีนี้ทำให้คุณยังคงอยู่ในโมเดลการเขียนโปรแกรมเว็บดั้งเดิมโดยใช้
+              "Hypertext As The Engine Of Application State"
+              โดยไม่ต้องเข้าใจแนวคิดนั้นจริงๆ
+            </p>
+            <p>
+              ควรกล่าวถึงด้วยว่า คุณสามารถใช้คำนำหน้า data- เมื่อใช้ htmx ได้
+              เช่น:
+            </p>
+            <div class="mockup-code bg-slate-800">
+              <pre
+                class="bg-transparent"
+              ><code>&lt;a&nbsp;<span style="color: rgb(223, 48, 121)">data-hx-post</span>=<span style="color: rgb(0, 166, 125)">&quot;/click&quot;</span>&gt;Click Me!&lt;/a&gt;</code></pre>
+            </div>
+            <h2>ใช้ยังไง</h2>
+            <p>
+              Htmx เป็นไลบรารี JavaScript
+              ที่เน้นการใช้งานบนเบราว์เซอร์และไม่ต้องพึ่งพาไลบรารีอื่นๆ
+              นั่นหมายถึงการใช้งานนั้นง่ายดายเพียงเพิ่มแท็ก &lt;script&gt;
+              เข้าไปในส่วนหัวของเอกสารของคุณ ไม่จำเป็นต้องมีขั้นตอนหรือระบบ
+              build ที่ซับซ้อน
+            </p>
+            <iframe
+              src="https://replit.com/@SupaschaiPh/SKMIT-HTMX?embed=true"
+              width="100%"
+              height="600"
+            ></iframe>
+          </div>
         </div>
+        <div class="drawer-side">
+          <label
+            for="my-drawer-2"
+            aria-label="close sidebar"
+            class="drawer-overlay"
+          ></label>
+          <ul
+            id="tableof-content"
+            class="menu p-4 w-80 min-h-full bg-base-200 text-base-content pt-24"
+          >
+            <li><b>สารบัญ</b></li>
+          </ul>
+        </div>
+      </div>
     </main>
     <script src="./autoGenTableOfContent.js"></script>
-</body>
-
+  </body>
 </html>
