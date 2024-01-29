@@ -40,5 +40,12 @@
     "path": "xampp.html",
     "tags": [],
     "coverURL": "../api/images/xampp_cv.png"
+  },
+  {
+    "title": "MySQL",
+    "desc": "MySQL คือ อะไร ?",
+    "path": "mysql.html",
+    "tags": [],
+    "coverURL": "../api/images/xampp_cv.png"
   }
 ]
