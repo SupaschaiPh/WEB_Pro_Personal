@@ -29,8 +29,8 @@
   },
   {
     "title": "Chrome",
-    "desc": "demo content",
-    "path": "chorme.html",
+    "desc": "Google Chrome ท่องเว็บด้วยพลังของ Google",
+    "path": "chrome.html",
     "tags": ["Web browser"],
     "coverURL": "../api/images/chrome_cv.png"
   },
