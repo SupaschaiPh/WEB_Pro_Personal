@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en" data-theme="autumn" class="w-full">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../style.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="../assets/jquery.min.js"></script>
+    <script src="../assets/jquery.smoothScroll.js"></script>
+    <title>Xampp</title>
+  </head>
+
+  <body class="w-full h-full static overflow-hidden">
+    <nav class="fixed top-0 left-0 w-full p-2 z-50">
+      <div class="card shadow border glass z-50">
+        <div class="navbar w-full">
+          <div class="navbar-start">
+            <details class="dropdown">
+              <summary class="btn btn-ghost lg:hidden">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h8m-8 6h16"
+                  />
+                </svg>
+              </summary>
+              <ul
+                class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              >
+                <li><a href="../">Home</a></li>
+                <li><a href="../content">Content</a></li>
+                <li><a href="../about">About</a></li>
+              </ul>
+            </details>
+            <a href="./" class="btn btn-ghost text-xl">SupassTech</a>
+          </div>
+          <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+              <li><a href="../">Home</a></li>
+              <li><a href="../content">Content</a></li>
+              <li><a href="../about">About</a></li>
+            </ul>
+          </div>
+          <div class="navbar-end">
+            <label
+              for="my-drawer-2"
+              class="btn btn-primary drawer-button lg:hidden"
+              >สารบัญ</label
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+    <main class="w-full h-full overflow-hidden">
+      <div class="drawer lg:drawer-open h-full overflow-hidden">
+        <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
+        <div
+          id="main-content"
+          class="drawer-content pb-12 pt-24 px-6 overflow-y-auto h-full"
+        >
+          <div class="card shadow flex justify-center px-12 bg-white">
+            <figure>
+              <img
+                class="card w-auto h-48 p-4"
+                src="../api/images/xampp_logo.png"
+              />
+            </figure>
+          </div>
+          <div id="content-container" class="prose max-w-none mt-4">
+            <h2>Xampp</h2>
+            <sub
+              ><a href="https://www.apachefriends.org/"
+                >ที่มา : https://www.apachefriends.org/</a
+              ></sub
+            >
+            <sub
+              ><a
+                href="https://www.mindphp.com/คู่มือ/73-คืออะไร/+2637-xampp-คืออะไร.html"
+                >ที่มา :
+                https://www.mindphp.com/คู่มือ/73-คืออะไร/+2637-xampp-คืออะไร.html</a
+              ></sub
+            >
+            <sub
+              ><a href="https://en.wikipedia.org/wiki/XAMPP"
+                >ที่มา : https://en.wikipedia.org/wiki/XAMPP</a
+              ></sub
+            >
+            <p>
+              Xampp คืออะไร เป็นโปรแกรม Apache web server ไว้จำลอง web server
+              เพื่อไว้ทดสอบ สคริปหรือเว็บไซต์ในเครื่องของเรา
+              โดยที่ไม่ต้องเชื่อมต่ออินเตอร์เน็ตและไม่ต้องมีค่าใช้จ่ายใดๆ
+              ง่ายต่อการติดตั้งและใช้งานโปรแกรม Xampp จะมาพร้อมกับ PHP
+              ภาษาสำหรับพัฒนาเว็บแอพลิเคชั่นที่เป็นที่นิยม , MySQL ฐานข้อมูล,
+              Apache จะทำหน้าที่เป็นเว็บ เซิร์ฟเวอร์, Perl อีกทั้งยังมาพร้อมกับ
+              OpenSSL , phpMyadmin (ระบบบริหารฐานข้อมูลที่พัฒนาโดย PHP
+              เพื่อใช้เชื่อมต่อไปยังฐานข้อมูล สนับสนุนฐานข้อมูล MySQL และ SQLite
+              โปรแกรม Xampp จะอยู่ในรูปแบบของไฟล์ Zip, tar, 7z หรือ exe โปรแกรม
+              Xampp อยู่ภายใต้ใบอนุญาตของ GNU General Public License
+              แต่บางครั้งอาจจะมีการเปลี่ยนแปลงเรื่องของลิขสิทธิ์ในการใช้งาน
+              จึงควรติดตามและตรวจสอบโปรแกรมด้วย
+            </p>
+            <div class="flex justify-center w-full">
+              <img class="card" width="90%" src="../api/images/xampp_app.PNG" />
+            </div>
+
+            <h2>ส่วนของประกอบ XAMPP</h2>
+
+            <p>
+              1. X =Cross Platformโปรแกรม XAMPP
+              รองรับการรันบนระบบปฏิบัติการต่างๆ เช่น Windows, Linux และ OS
+              X&nbsp;
+            </p>
+
+            <p>
+              2. A =Apacheโปรแกรมสำหรับสร้างเว็บเซิร์ฟเวอร์ ทำงานบนโปรโตคอล
+              HTTP&nbsp;
+            </p>
+
+            <p>
+              3. M = MySQL (MariaDB)&nbsp; โปรแกรมฐานข้อมูล
+              ใช้สำหรับบริหารจัดการฐานข้อมูลบนเว็บไซต์&nbsp;
+            </p>
+
+            <p>
+              4. P = PHP&nbsp; ภาษาคอมพิวเตอร์สำหรับพัฒนาเว็บไซต์
+              มีการประมวลผลทางฝั่ง Server&nbsp;
+            </p>
+
+            <p>
+              5. P =Perlเป็นภาษาคอมพิวเตอร์ รองรับการพัฒนาโปรแกรมในลักษณะต่างๆ
+            </p>
+
+            <h3>โปรแกรม XAMPP สามารถใช้งานได้ 4 OS ได้แก่&nbsp;</h3>
+
+            <p>1.Windows</p>
+
+            <p>2. Linux&nbsp;&nbsp;</p>
+
+            <p>3. Mac OS X&nbsp;</p>
+
+            <p>4. Solaris สำหรับ Solaris 8 และ Solaris 9&nbsp;</p>
+
+            <p>เวอร์ชั่นในปี 2022 โปรแกรม XAMPP เวอร์ชั่นล่าสุดคือ</p>
+
+            <p>
+              สามารถใช้งานได้&nbsp;Windows 2008, 2012, Vista, 7, 8
+              หรือเวอร์ชั่นที่ใหม่กว่า ไม่รองรับ&nbsp;Windows XP or 2003
+            </p>
+
+            <p>
+              &nbsp;รองรับ Linux ทุกรุ่นส่วนใหญ่, including Debian, RedHat,
+              CentOS, Ubuntu, Fedora, Gentoo, Arch, SUSE.
+            </p>
+
+            <div>
+              <ul>
+                <li>
+                  XAMPP forWindows&nbsp;เวอร์ชั่น 7.4.29, 8.0.19 &amp; 8.1.6
+                </li>
+              </ul>
+
+              <ul>
+                <li>
+                  XAMPP forLinux&nbsp;เวอร์ชั่น 7.4.29, 8.0.19 &amp; 8.1.6
+                </li>
+              </ul>
+
+              <ul>
+                <li>
+                  XAMPP forOS X&nbsp;เวอร์ชั่น 7.4.29, 8.0.19, 8.1.6, 7.4.29,
+                  8.0.19 &amp; 8.1.6
+                </li>
+              </ul>
+            </div>
+
+            <p>&nbsp;รองรับ Mac OS X 10.6&nbsp;หรือ เวอร์ชั่นที่ใหม่กว่า</p>
+
+            <div><br /></div>
+
+            <p>
+              &nbsp;ในการใช้งานเบื้องต้นให้ดับเบิ้ลคลิ๊ก Xampp Control Panel
+              Application แล้วทำการคลิ๊กปุ่ม start จากนั้นสามารถใช้งานได้
+              โดยเปิด Browser ขึ้นมาพิมพ์ localhost หรือ 127.0.0.1&nbsp;
+            </p>
+
+            <h2>ข้อดีของ XMAPP</h2>
+
+            <div>
+              <ol>
+                <li>
+                  สามารถติดตั้งเว็บเซิร์ฟเวอร์ได้อย่างง่ายดาย
+                  ประหยัดเวลาเนื่องจากไม่จำเป็นต้องติดตั้งและตั้งค่าโปรแกรมแต่ละตัวด้วยตนเอง&nbsp;
+                </li>
+                <li>สามารถดาวน์โหลดมาติดตั้ง และใช้งานได้ฟรี&nbsp;</li>
+                <li>รองรับการทำงานบนระบบปฏิบัติการต่างๆ ที่หลากหลาย&nbsp;</li>
+                <li>
+                  โปรแกรมทำงานได้ดี
+                  รองรับการสร้างเว็บเซิร์ฟเวอร์ได้อย่างมีประสิทธิภาพ&nbsp;
+                </li>
+                <li>โปรแกรมได้รับความนิยมใช้งานอย่างแพร่หลาย&nbsp;</li>
+                <li>
+                  มีบทความ เอกสาร คู่มือ วิธีการปรับแต่ง และแก้ไขปัญหา
+                  เยอะ&nbsp;
+                </li>
+                <li>
+                  โปรแกรมมีเวอร์ชั่นต่างๆ
+                  ให้เลือกตามความเหมาะสมในการใช้งาน&nbsp;
+                </li>
+              </ol>
+            </div>
+
+            <p>
+              &nbsp; &nbsp; &nbsp; โปรแกรมจำลองเว็บไซต์ก็ยังมีอีกหลายแบบ
+              ไม่ว่าจะเป็นAppserv, Wamp เป็นต้น&nbsp;
+              สิ่งที่ควรพิจารณาเลือกใช้ในการเลือกคือเวอร์ชั่นของ Apache, PHP และ
+              MySQL เนื่องจากCMSแต่ละโปรแกรมนั้นมีความต้องการเวอร์ชั่นไม่เท่ากัน
+              ก่อนใช้งานจึงต้องพิจารณาให้ดี ไม่ว่าจะเป็นในส่วนของระบบ
+              หรือเวอร์ชั่นโปรแกรม เพื่อไม่ให้เกิดปัญหา
+              หรือเกิดปัญหาในการใช้งานน้อยที่สุด
+              เพื่อที่จะจำลองเว็บไซต์ได้โดยไม่มีปัญหา
+            </p>
+
+            <p>
+              &nbsp; &nbsp; &nbsp; สำหรับท่านไหนที่อยากลองใช้โปรแกรม Xampp
+              เเละยังไม่มีเว็บไซต์ให้ลองใช้งานโปรแกรม
+              เราขอเเนะนำกับการสร้างเว็บ&nbsp;E-Commerce&nbsp;
+              ระบบที่สามารถจัดการเว็บได้ทุกอย่าง และ
+              สามารถเพิ่มลูกเล่นเข้าไปในระบบร้านค้าออนไลน์ของตัวอย่างได้อย่างไม่จำกัด
+              ด้วยMooZiiCart สำหรับทำเว็บขายของด้วย Joomla&nbsp;สามารถใช้โปรแกรม
+              Xampp ในการจำลอง
+              เเละทำการลงส่วนเสริมต่างๆได้อย่างง่ายดาย&nbsp;&nbsp;เหมาะสำหรับผู้ที่อยากขายสินค้าออนไลน์
+              และบุคคลทั่วไปที่สนใจศึกษาระบบขายสินค้า
+              โดยไม่จำเป็นต้องมีความรู้เรื่องการเขียนโปรแกรม
+              เนื่องจากระบบถูกออกแบบมาให้สามารถใช้งานได้ง่าย
+              รองรับการทำงานที่ครบกระบวนการของร้านค้าออนไลน์
+            </p>
+
+            <h2>ข้อจำกัดด้านเทคนิค</h2>
+
+            <p>- เครื่องคอมพิวเตอร์ควรมี RAM ไม่ต่ำกว่า 128 MB</p>
+
+            <p>- Harddisk มีพื้นที่มากกว่า 320 MB</p>
+
+            <p>- CPU ไม่กำหนดขั้นต่ำ</p>
+          </div>
+        </div>
+        <div class="drawer-side">
+          <label
+            for="my-drawer-2"
+            aria-label="close sidebar"
+            class="drawer-overlay"
+          ></label>
+          <ul
+            id="tableof-content"
+            class="menu p-4 w-80 min-h-full bg-base-200 text-base-content pt-24"
+          >
+            <li><b>สารบัญ</b></li>
+          </ul>
+        </div>
+      </div>
+    </main>
+    <script src="./autoGenTableOfContent.js"></script>
+  </body>
+</html>
