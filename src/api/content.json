@@ -22,7 +22,7 @@
   },
   {
     "title": "Apache",
-    "desc": "demo content",
+    "desc": "",
     "path": "apache.html",
     "tags": ["Web server"],
     "coverURL": "../api/images/apache_cv.png"
