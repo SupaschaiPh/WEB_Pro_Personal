@@ -22,7 +22,7 @@
   },
   {
     "title": "Apache",
-    "desc": "",
+    "desc": "เซิร์ฟเวอร์ HTTP อันดับหนึ่งบนอินเทอร์เน็ต",
     "path": "apache.html",
     "tags": ["Web server"],
     "coverURL": "../api/images/apache_cv.png"
