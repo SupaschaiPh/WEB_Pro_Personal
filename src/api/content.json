@@ -1,6 +1,7 @@
 [
   {
     "title": "Svelte",
+    "title": "Svelte",
     "desc": "เว็บเฟรมเวิร์คที่นักพัฒนา \"รัก\" มากที่สุด (most loved web framework)",
     "path": "svelte.html",
     "tags": [],
@@ -32,6 +33,7 @@
     "desc": "htmx เครื่องมือสุดทรงพลังสำหรับ HTML",
     "path": "htmx.html",
     "tags": [],
+    "coverURL": "../api/images/htmx_cv.png"
     "coverURL": "../api/images/htmx_cv.png"
   },
   {
@@ -80,7 +82,8 @@
     "title": "XAMPP",
     "desc": "demo content",
     "path": "xampp.html",
+    "path": "xampp.html",
     "tags": [],
-    "coverURL": "../api/images/xampp_cv.png"
+    "coverURL": "../api/images/xampp_cv.png../api/images/xampp_cv.png"
   }
 ]
