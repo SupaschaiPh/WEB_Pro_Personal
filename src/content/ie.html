@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en" data-theme="autumn" class="w-full">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../style.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="../assets/jquery.min.js"></script>
+    <script src="../assets/jquery.smoothScroll.js"></script>
+    <title>Internet Explorer</title>
+  </head>
+
+  <body class="w-full h-full static overflow-hidden">
+    <nav class="fixed top-0 left-0 w-full p-2 z-50">
+      <div class="card shadow border glass z-50">
+        <div class="navbar w-full">
+          <div class="navbar-start">
+            <details class="dropdown">
+              <summary class="btn btn-ghost lg:hidden">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h8m-8 6h16"
+                  />
+                </svg>
+              </summary>
+              <ul
+                class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              >
+                <li><a href="../">Home</a></li>
+                <li><a href="../content">Content</a></li>
+                <li><a href="../about">About</a></li>
+              </ul>
+            </details>
+            <a href="./" class="btn btn-ghost text-xl">SupassTech</a>
+          </div>
+          <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+              <li><a href="../">Home</a></li>
+              <li><a href="../content">Content</a></li>
+              <li><a href="../about">About</a></li>
+            </ul>
+          </div>
+          <div class="navbar-end">
+            <label
+              for="my-drawer-2"
+              class="btn btn-primary drawer-button lg:hidden"
+              >สารบัญ</label
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+    <main class="w-full h-full overflow-hidden">
+      <div class="drawer lg:drawer-open h-full overflow-hidden">
+        <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
+        <div
+          id="main-content"
+          class="drawer-content pb-12 pt-24 px-6 overflow-y-auto h-full"
+        >
+          <div class="card shadow flex justify-center px-12 bg-white">
+            <figure>
+              <img
+                class="card w-auto h-48 p-4"
+                src="../api/images/ie_logo.png"
+              />
+            </figure>
+          </div>
+          <div id="content-container" class="prose max-w-none mt-4">
+            <h2>Internet Explorer บทเรียนสำคัญสำหรับเว็บเบราว์เซอร์ยุคใหม่</h2>
+            <sub
+              ><a
+                href="https://www.techtarget.com/searchenterprisedesktop/definition/Internet-Explorer"
+                >ที่มา :
+                https://www.techtarget.com/searchenterprisedesktop/definition/Internet-Explorer</a
+              ></sub
+            >
+
+            <p>
+              Internet Explorer (IE)
+              เคยเป็นเว็บเบราว์เซอร์ยอดนิยมที่มาพร้อมกับระบบปฏิบัติการ Microsoft
+              Windows แต่ปัจจุบันยกเลิกการสนับสนุนแล้วใน Windows 10 แล้ว
+              แทนที่ด้วยเบราว์เซอร์ใหม่ของ Microsoft ชื่อ Edge Browser แม้ว่า IE
+              จะยังคงใช้งานได้ในบางเวอร์ชันของ Windows เช่น Windows 8.1 และ
+              Microsoft Edge ก็มีฟีเจอร์ที่เรียกว่าโหมด IE
+            </p>
+            <p>
+              ข้อมูลปี 2023 ระบุว่า Internet Explorer
+              เป็นเว็บเบราว์เซอร์ที่ได้รับความนิยมน้อยที่สุดบนเดสก์ท็อป
+              มีแชร์การตลาดเพียง 0.45% เมื่อเทียบกับ Google Chrome ที่มี 66.02%
+              ตามข้อมูลของ StatCounter IE ครองตำแหน่งเบราว์เซอร์ยอดนิยมตั้งแต่ปี
+              1999 เมื่อแซงหน้า Netscape Navigator มาจนถึงปี 2012 ที่ Chrome
+              ขึ้นนำ คู่แข่งอื่นๆ ได้แก่ Mozilla Firefox
+              ซึ่งเป็นเบราว์เซอร์โอเพนซอร์สที่พัฒนาโดยใช้โค้ดจาก Netscape
+              Navigator และ Safari ของ Apple iOS
+            </p>
+            <div class="flex justify-center w-full">
+              <img class="card" width="90%" src="../api/images/ie_app.png" />
+            </div>
+            <h2>อดีตอันรุ่งโรจน์และจุดจบของ Internet Explorer</h2>
+            <p>
+              Internet Explorer เคยเป็นเว็บเบราว์เซอร์อันดับหนึ่งของโลก
+              เบื้องต้น Microsoft พัฒนา IE โดยอาศัยเทคโนโลยีจาก Spyglass
+              เจ้าของเบราว์เซอร์ Mosaic บุกเบิกยุคแรก เวอร์ชันแรกเปิดตัวในปี
+              1995 สำหรับ Windows 95 ตามมาด้วยเวอร์ชัน 2
+              รองรับระบบความปลอดภัยและคุกกี้ เวอร์ชัน 3 ในปี 1996 เพิ่มฟีเจอร์
+              Java และ Cascading Style Sheets
+            </p>
+            <p>
+              ปี 1998 รัฐบาลสหรัฐฯ ฟ้องร้อง Microsoft ฐานผูกขาดตลาด โดยบังคับรวม
+              IE กับ Windows จนปี 2001 ทั้งสองฝ่ายตกลงกันโดยไม่ต้องแยก IE ออก
+            </p>
+            <p>
+              ตลอดอายุขัย IE มีอัปเดต 11
+              เวอร์ชันและแพทช์นับไม่ถ้วนเพื่ออุดช่องโหว่ IE 11
+              เวอร์ชันสุดท้ายเปิดตัวในปี 2013 ถูกแทนที่ด้วย Microsoft Edge ใน
+              Windows 10 ปี 2015
+            </p>
+            <p>
+              ปี 2020 Microsoft ประกาศยุติการสนับสนุนแอปพลิเคชัน Office สำหรับ
+              IE ปี 2022 ยุติการสนับสนุน IE 11 อย่างเป็นทางการ กุมภาพันธ์ 2023
+              อัปเดต Microsoft Edge ปิดใช้งาน IE ถาวรใน Windows 10 ส่วนใหญ่
+              ผู้ใช้จะถูกเปลี่ยนไปใช้ Edge
+            </p>
+            <p>
+              ปัจจุบัน หากยังต้องการใช้ IE สำหรับเว็บเก่า สามารถเปิดใช้งานโหมด
+              IE ใน Microsoft Edge
+              เพื่อใช้งานเว็บยุคใหม่และเก่าภายในเบราว์เซอร์เดียวกัน นอกจากนี้
+              Microsoft ยังยุติการสนับสนุน IE ในระบบอื่นๆ อย่าง Unix และ Mac OS
+              X อีกด้วย
+            </p>
+            <div class="flex justify-center w-full">
+                <img class="card" width="90%" src="../api/images/ie_img1.jpg" />
+              </div>
+            <h2>ฟีเจอร์และการตั้งค่าความปลอดภัยของ IE</h2>
+            <p>
+              แม้ Microsoft จะยุติการสนับสนุน Internet Explorer แล้ว
+              แต่การรู้จักฟีเจอร์และการตั้งค่าความปลอดภัยของมันก็ยังมีประโยชน์อยู่บ้าง
+              นี่คือสรุปคร่าวๆ
+            </p>
+
+            <p><strong>ส่วนติดต่อผู้ใช้:</strong></p>
+
+            <ul>
+              <li>แถบที่อยู่ แสดงเว็บไซต์ที่เข้าชม</li>
+              <li>แถบเมนู หลากหลายฟังก์ชัน เช่น บันทึก เปลี่ยนขนาดตัวอักษร</li>
+              <li>แถบรายการโปรดักต์ เว็บไซต์ที่ใช้งานบ่อย</li>
+              <li>แถบสถานะ แสดงสถานะการโหลดหน้าเว็บ</li>
+            </ul>
+
+            <p><strong>เมนูหลัก:</strong></p>
+
+            <ul>
+              <li>
+                <strong>File:</strong>บันทึก เปิดหน้าต่าง/แท็บใหม่
+                แก้ไขโค้ดหน้าเว็บ (บางเวอร์ชัน)
+              </li>
+              <li><strong>Edit:</strong>ตัด คัดลอก วาง ค้นหาในหน้าเว็บ</li>
+              <li>
+                <strong>Tools:</strong>ฟีเจอร์สำคัญด้านความปลอดภัย เช่น
+                บล็อกป๊อปอัพ โหมดไม่ระบุตัวตน การติดตามตำแหน่ง ActiveX filter
+              </li>
+            </ul>
+
+            <p><strong>การตั้งค่าความปลอดภัย:</strong></p>
+
+            <ul>
+              <li>
+                <strong>Internet Options:</strong>ปรับแต่งหน้าแรก ลบประวัติ
+                เปลี่ยนธีม ตั้งระดับความปลอดภัย เปิด/ปิดโหมดป้องกัน
+              </li>
+              <li>
+                <strong>Security:</strong>เลือกระดับความปลอดภัย
+                เปิด/ปิดโหมดป้องกัน
+              </li>
+              <li>
+                <strong>Privacy:</strong>บล็อกป๊อปอัพ โหมดไม่ระบุตัวตน
+                ป้องกันเว็บไซต์ติดตามตำแหน่ง
+              </li>
+              <li>
+                <strong>Content:</strong>ใบรับรอง การกรอกข้อมูลอัตโนมัติ ฟีด
+                ข่าวสาร
+              </li>
+              <li>
+                <strong>Connection:</strong>ตั้งค่าการเชื่อมต่ออินเทอร์เน็ต
+                (ไม่ค่อยใช้ในปัจจุบัน)
+              </li>
+              <li>
+                <strong>Programs:</strong>จัดการ Add-on การเชื่อมโยงไฟล์
+                แอปพลิเคชันที่เกี่ยวข้อง
+              </li>
+              <li><strong>Advanced:</strong>ปรับแต่งเบราว์เซอร์อย่างละเอียด</li>
+            </ul>
+          </div>
+        </div>
+        <div class="drawer-side">
+          <label
+            for="my-drawer-2"
+            aria-label="close sidebar"
+            class="drawer-overlay"
+          ></label>
+          <ul
+            id="tableof-content"
+            class="menu p-4 w-80 min-h-full bg-base-200 text-base-content pt-24"
+          >
+            <li><b>สารบัญ</b></li>
+          </ul>
+        </div>
+      </div>
+    </main>
+    <script src="./autoGenTableOfContent.js"></script>
+  </body>
+</html>
